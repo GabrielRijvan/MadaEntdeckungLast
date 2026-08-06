@@ -97,43 +97,47 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==========================================================================
   // 5. GESTION ET VALIDATION INTERACTIVE DU FORMULAIRE DE DEVIS
   // ==========================================================================
-  const devisForm = document.querySelector("form");
+  /*
+const devisForm = document.querySelector("form");
 
-  if (devisForm) {
-    devisForm.addEventListener("submit", (e) => {
-      e.preventDefault(); // Empêche le rechargement brutal de la page
+if (devisForm) {
+  devisForm.addEventListener("submit", (e) => {
+    e.preventDefault(); // Empêche le rechargement brutal de la page
 
-      // Simulation d'une validation visuelle
-      const submitBtn = devisForm.querySelector(
-        'button[type="submit"], .btn-submit'
-      );
-      if (submitBtn) {
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = "Validation en cours...";
-        submitBtn.style.backgroundColor = "#2e7d32"; // Vert de confirmation
+    // Simulation d'une validation visuelle
+    const submitBtn = devisForm.querySelector(
+      'button[type="submit"], .btn-submit'
+    );
 
+    if (submitBtn) {
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = "Validation en cours...";
+      submitBtn.style.backgroundColor = "#2e7d32"; // Vert de confirmation
+
+      setTimeout(() => {
+        submitBtn.textContent = "Demande envoyée avec succès!";
+
+        // Création d'un message de succès visuel dans le formulaire
+        let successMsg = document.createElement("div");
+        successMsg.textContent =
+          "Merci ! Notre équipe vous contactera très rapidement.";
+        successMsg.style.cssText =
+          "margin-top: 15px; padding: 12px; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; border-radius: 8px; text-align: center; font-weight: bold;";
+
+        devisForm.appendChild(successMsg);
+
+        // Réinitialisation après quelques secondes
         setTimeout(() => {
-          submitBtn.textContent = "Demande envoyée avec succès !";
-          
-          // Création d'un message de succès visuel dans le formulaire
-          let successMsg = document.createElement("div");
-          successMsg.textContent = "Merci ! Notre équipe vous contactera très rapidement.";
-          successMsg.style.cssText = "margin-top: 15px; padding: 12px; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; border-radius: 8px; text-align: center; font-weight: bold;";
-          
-          devisForm.appendChild(successMsg);
-
-          // Réinitialisation après quelques secondes
-          setTimeout(() => {
-            devisForm.reset();
-            submitBtn.textContent = originalText;
-            submitBtn.style.backgroundColor = "";
-            successMsg.remove();
-          }, 4000);
-        }, 1500);
-      }
-    });
-  }
-
+          devisForm.reset();
+          submitBtn.textContent = originalText;
+          submitBtn.style.backgroundColor = "";
+          successMsg.remove();
+        }, 4000);
+      }, 1500);
+    }
+  });
+}
+*/
   // ==========================================================================
   // 6. SYSTÈME DE LIGHTBOX SIMPLE POUR LES IMAGES DES FICHES DÉTAILLÉES
   // ==========================================================================
